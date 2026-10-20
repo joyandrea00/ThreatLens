@@ -1,4 +1,3 @@
-
 package threatlens_api.api;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,7 +11,10 @@ import threatlens_api.detection.ThreatDetectionService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://threatlens-aga8.onrender.com"
+})
 @RestController
 @RequestMapping("/api/detection")
 public class DetectionController {
